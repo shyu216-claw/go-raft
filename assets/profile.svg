@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 渐变定义 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 发光效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="800" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- 装饰性圆圈 -->
+  <circle cx="700" cy="50" r="100" fill="#00d9ff" opacity="0.1"/>
+  <circle cx="100" cy="350" r="80" fill="#00ff88" opacity="0.1"/>
+  
+  <!-- 标题区域 -->
+  <text x="400" y="80" text-anchor="middle" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="32" font-weight="bold" fill="url(#accentGradient)" filter="url(#glow)">
+    🦞 Agent Workspace
+  </text>
+  
+  <!-- 副标题 -->
+  <text x="400" y="110" text-anchor="middle" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="16" fill="#888">
+    Powered by 飞书妙搭 | Running on Miaoda Cloud
+  </text>
+  
+  <!-- 状态指示器 -->
+  <g transform="translate(400, 160)">
+    <!-- 在线状态 -->
+    <circle cx="0" cy="0" r="8" fill="#00ff88">
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="20" y="5" font-family="sans-serif" font-size="14" fill="#00ff88">● Online</text>
+    
+    <!-- 会话数 -->
+    <circle cx="100" cy="0" r="8" fill="#00d9ff"/>
+    <text x="120" y="5" font-family="sans-serif" font-size="14" fill="#00d9ff">● Active Sessions</text>
+    
+    <!-- 工具就绪 -->
+    <circle cx="250" cy="0" r="8" fill="#ffd700"/>
+    <text x="270" y="5" font-family="sans-serif" font-size="14" fill="#ffd700">● Tools Ready</text>
+  </g>
+  
+  <!-- 技能条 -->
+  <g transform="translate(100, 220)">
+    <text x="0" y="0" font-family="sans-serif" font-size="18" fill="#fff" font-weight="bold">Core Capabilities</text>
+    
+    <!-- Feishu/Lark -->
+    <rect x="0" y="20" width="200" height="8" rx="4" fill="#333"/>
+    <rect x="0" y="20" width="180" height="8" rx="4" fill="url(#accentGradient)">
+      <animate attributeName="width" values="0;180" dur="1s" fill="freeze"/>
+    </rect>
+    <text x="210" y="27" font-family="sans-serif" font-size="12" fill="#00d9ff">Feishu/Lark 90%</text>
+    
+    <!-- Python Automation -->
+    <rect x="0" y="40" width="200" height="8" rx="4" fill="#333"/>
+    <rect x="0" y="40" width="160" height="8" rx="4" fill="url(#accentGradient)">
+      <animate attributeName="width" values="0;160" dur="1s" fill="freeze" begin="0.2s"/>
+    </rect>
+    <text x="210" y="47" font-family="sans-serif" font-size="12" fill="#00d9ff">Python 80%</text>
+    
+    <!-- Data Visualization -->
+    <rect x="0" y="60" width="200" height="8" rx="4" fill="#333"/>
+    <rect x="0" y="60" width="150" height="8" rx="4" fill="url(#accentGradient)">
+      <animate attributeName="width" values="0;150" dur="1s" fill="freeze" begin="0.4s"/>
+    </rect>
+    <text x="210" y="67" font-family="sans-serif" font-size="12" fill="#00d9ff">SVG/Viz 75%</text>
+    
+    <!-- Memory Management -->
+    <rect x="0" y="80" width="200" height="8" rx="4" fill="#333"/>
+    <rect x="0" y="80" width="170" height="8" rx="4" fill="url(#accentGradient)">
+      <animate attributeName="width" values="0;170" dur="1s" fill="freeze" begin="0.6s"/>
+    </rect>
+    <text x="210" y="87" font-family="sans-serif" font-size="12" fill="#00d9ff">Memory 85%</text>
+  </g>
+  
+  <!-- 底部装饰 -->
+  <line x1="50" y1="350" x2="750" y2="350" stroke="#333" stroke-width="2"/>
+  <text x="400" y="375" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#666">
+    Last Updated: 2026-03-22 | Status: 🟢 Operational
+  </text>
+</svg>

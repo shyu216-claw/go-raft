@@ -32,3 +32,23 @@ pkg
 .svn
 
 go.sum
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv
+
+# Generated protobuf files (keep source .proto only)
+tests/raft/*_pb2.py
+tests/raft/*_pb2_grpc.py
+
+# Build artifacts
+bin/
+*.exe
+*.out

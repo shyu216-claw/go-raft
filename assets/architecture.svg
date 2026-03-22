@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50"/>
+      <stop offset="100%" style="stop-color:#34495e"/>
+    </linearGradient>
+    
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00d9ff"/>
+    </marker>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="#1a1a2e"/>
+  
+  <!-- 标题 -->
+  <rect width="900" height="60" fill="url(#headerGrad)"/>
+  <text x="450" y="38" text-anchor="middle" font-family="sans-serif" font-size="24" fill="#fff" font-weight="bold">
+    🏗️ Agent Architecture
+  </text>
+  
+  <!-- User Layer -->
+  <g transform="translate(50, 90)">
+    <rect width="800" height="60" rx="10" fill="#3498db" opacity="0.2" stroke="#3498db" stroke-width="2"/>
+    <text x="400" y="35" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#3498db" font-weight="bold">
+      👤 User (Feishu/Lark)
+    </text>
+  </g>
+  
+  <!-- Arrow down -->
+  <line x1="450" y1="150" x2="450" y2="180" stroke="#00d9ff" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Agent Core -->
+  <g transform="translate(200, 180)">
+    <rect width="500" height="120" rx="10" fill="#2ecc71" opacity="0.2" stroke="#2ecc71" stroke-width="2"/>
+    <text x="250" y="30" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#2ecc71" font-weight="bold">
+      🧠 Agent Core (OpenClaw)
+    </text>
+    
+    <!-- Sub-components -->
+    <rect x="20" y="45" width="130" height="50" rx="5" fill="#27ae60" opacity="0.5"/>
+    <text x="85" y="75" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#fff">Memory</text>
+    
+    <rect x="185" y="45" width="130" height="50" rx="5" fill="#27ae60" opacity="0.5"/>
+    <text x="250" y="75" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#fff">Tools</text>
+    
+    <rect x="350" y="45" width="130" height="50" rx="5" fill="#27ae60" opacity="0.5"/>
+    <text x="415" y="75" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#fff">Skills</text>
+  </g>
+  
+  <!-- Arrows down -->
+  <line x1="250" y1="300" x2="200" y2="340" stroke="#00d9ff" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="300" x2="450" y2="340" stroke="#00d9ff" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="650" y1="300" x2="700" y2="340" stroke="#00d9ff" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Integration Layer -->
+  <g transform="translate(50, 340)">
+    <rect width="250" height="100" rx="10" fill="#9b59b6" opacity="0.2" stroke="#9b59b6" stroke-width="2"/>
+    <text x="125" y="30" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#9b59b6" font-weight="bold">
+      🔌 Feishu Plugin
+    </text>
+    <text x="125" y="55" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#bbb">IM • Calendar • Bitable</text>
+    <text x="125" y="75" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#bbb">Docs • Search • Auth</text>
+  </g>
+  
+  <g transform="translate(325, 340)">
+    <rect width="250" height="100" rx="10" fill="#e67e22" opacity="0.2" stroke="#e67e22" stroke-width="2"/>
+    <text x="125" y="30" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#e67e22" font-weight="bold">
+      📊 Raft God View
+    </text>
+    <text x="125" y="55" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#bbb">Flask + gRPC</text>
+    <text x="125" y="75" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#bbb">SVG Visualization</text>
+  </g>
+  
+  <g transform="translate(600, 340)">
+    <rect width="250" height="100" rx="10" fill="#e74c3c" opacity="0.2" stroke="#e74c3c" stroke-width="2"/>
+    <text x="125" y="30" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#e74c3c" font-weight="bold">
+      🛠️ Dev Tools
+    </text>
+    <text x="125" y="55" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#bbb">Git • Python • Go</text>
+    <text x="125" y="75" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#bbb">Documentation</text>
+  </g>
+  
+  <!-- Bottom bar -->
+  <rect y="470" width="900" height="30" fill="#0f0f1a"/>
+  <text x="450" y="490" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#666">
+    Miaoda Cloud Computer | Linux 6.8.0 | Node v22.22.1 | Python 3.12.3
+  </text>
+</svg>
